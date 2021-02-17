@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t prashanth1261/dockerdotnet -f dockerfile.dev .
+  - docker build -t prashanth1261/dockerdotnet -f .
 
 deploy:
   provider: elasticbeanstalk
