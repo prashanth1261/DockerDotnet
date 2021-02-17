@@ -6,4 +6,4 @@ COPY . .
 
 RUN dotnet restore
 
-CMD ["dotnet", "watch", "run"]
+CMD ["dotnet","run"]
