@@ -12,6 +12,6 @@ RUN dotnet publish -c release -o /src/app/releaseartifacts
 
 WORKDIR /src/app/releaseartifacts
 
-EXPOSE 5000
+ENV ASPNETCORE_URLS="http://0.0.0.0:5023"
 
-ENTRYPOINT [ "dotnet","DockerDotnet.dll", "https://0.0.0.0:5000"]
+ENTRYPOINT [ "dotnet","DockerDotnet.dll"]
