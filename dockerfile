@@ -14,4 +14,4 @@ WORKDIR /src/app/releaseartifacts
 
 ENV ASPNETCORE_URLS="http://0.0.0.0:5023"
 
-ENTRYPOINT [ "dotnet","DockerDotnet.dll"]
+ENTRYPOINT [ "dotnet","run"]
