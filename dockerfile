@@ -8,9 +8,9 @@ RUN dotnet restore
 
 RUN dotnet build
 
-RUN dotnet publish -c release -o /src/app/releaseartifacts
+#RUN dotnet publish -c release -o /src/app/releaseartifacts
 
-WORKDIR /src/app/releaseartifacts
+#WORKDIR /src/app/releaseartifacts
 
 ENV ASPNETCORE_URLS="http://0.0.0.0:5023"
 
