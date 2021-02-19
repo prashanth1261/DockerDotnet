@@ -8,18 +8,14 @@ RUN dotnet restore
 
 RUN dotnet build
 
-RUN dotnet publish -c release -o /src/app/releaseartifacts
+#RUN dotnet publish -c release -o /src/app/releaseartifacts
 
-WORKDIR /src/app/releaseartifacts
+#WORKDIR /src/app/releaseartifacts
 
-#ENV ASPNETCORE_URLS="http://0.0.0.0:5023"
+# ENV ASPNETCORE_URLS="http://0.0.0.0:5023"
 
-#EXPOSE 5023
-#EXPOSE 8080
-#EXPOSE 80
+# EXPOSE 5023
+# EXPOSE 8080
+# EXPOSE 80
 
-#ENTRYPOINT [ "dotnet","run"]
-
-FROM nginx
-EXPOSE 80
-COPY  --from=0 /src/app/releaseartifacts /usr/share/nginx/html
+ENTRYPOINT [ "dotnet","run"]
