@@ -12,9 +12,9 @@ RUN dotnet build
 
 #WORKDIR /src/app/releaseartifacts
 
-#ENV ASPNETCORE_URLS="http://0.0.0.0:5023"
+ENV ASPNETCORE_URLS="http://*:5000"
 
-EXPOSE 5000
+EXPOSE 5000/tcp
 # EXPOSE 8080
 # EXPOSE 80
 
