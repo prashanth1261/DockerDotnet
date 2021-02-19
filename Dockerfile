@@ -2,8 +2,6 @@ FROM mcr.microsoft.com/dotnet/sdk:3.1
 
 WORKDIR /src/app
 
-EXPOSE 80
-
 COPY . .
 
 RUN dotnet restore
